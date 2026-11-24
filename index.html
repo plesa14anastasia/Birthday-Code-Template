@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Happy Birthday [Name]! &lt;3</title>
+    <link rel="preload" href="background_memory1.jpg" as="image">
+    <link rel="preload" href="background_memory2.jpg" as="image">
+    <link rel="preload" href="memory1.jpg" as="image">
+    <link rel="preload" href="memory2.jpg" as="image">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="magic-background">
+        <div class="heart" style="left: 10%; animation-delay: 0s;">💚</div>
+        <div class="heart" style="left: 30%; animation-delay: 2s;">💛</div>
+        <div class="heart" style="left: 50%; animation-delay: 4s;">🧡</div>
+        <div class="heart" style="left: 70%; animation-delay: 1s;">❤️</div>
+        <div class="heart" style="left: 90%; animation-delay: 3s;">💙</div>
+        <div class="star" style="top: 20%; left: 15%; animation-delay: 0.5s;">✦</div>
+        <div class="star" style="top: 70%; left: 80%; animation-delay: 1s;">✦</div>
+        <div class="star" style="top: 15%; left: 75%; animation-delay: 1.5s;">✦</div>
+        <div class="star" style="top: 80%; left: 20%; animation-delay: 2s;">✦</div>
+        <div class="star" style="top: 40%; left: 90%; animation-delay: 0.2s;">✦</div>
+    </div>
+
+    <div id="page-1" class="paper-wrapper">
+        <div class="paperclip">
+            <div class="clip-sparkle">✦</div>
+            <div class="clip-outer"></div>
+            <div class="clip-inner"></div>
+        </div>
+        <div class="paper-note">
+            <div class="holes"></div>
+            <div>
+                <h1>Do you want to open this <span class="surprise-word">surprise</span>?</h1>
+                <div class="buttons">
+                    <button id="yes-btn" class="main-btn">YES</button>
+                    <button id="no-btn" class="main-btn">NO</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="glitch-overlay" class="glitch-screen" style="display: none;"></div>
+
+    <div id="vscode-bg" class="vscode-bg" style="display: none;"></div>
+    <div id="page-2" class="retro-terminal" style="display: none;">
+        <div class="terminal-body">
+            <p>SYSTEM INITIALIZATION...</p>
+            <p>ACCESSING MEMORY BANKS...</p>
+            <br>
+            <p>PLEASE ENTER SECURE PASSWORD TO CONTINUE:</p>
+            <p class="hint">(Hint: "DD/MM/YYYY" — Demo password: 01/01/2000)</p>
+            <div class="input-line">
+                <span>&gt; </span>
+                <input type="text" id="password-input" placeholder="01/01/2000" autocomplete="off" maxlength="10" />
+            </div>
+            <p id="error-msg" class="error" style="display: none;">&gt; ACCESS DENIED. INCORRECT PASSWORD.</p>
+        </div>
+    </div>
+
+    <div id="page-3" class="polaroid-page" style="display: none;">
+        <h1 class="page-title">A Look Back in Time...</h1>
+
+        <div class="rope-track track-left">
+            <div class="rope-curve rope-left"></div>
+            <div class="rope-curve rope-center"></div>
+            <div class="rope-curve rope-right"></div>
+            <div class="polaroids-row">
+                <div class="polaroid-wrapper" style="--tilt: -5deg;">
+                    <div class="peg"></div>
+                    <div class="polaroid">
+                        <div class="polaroid-inner">
+                            <div class="polaroid-front">
+                                <img src="photo1.jpg" class="polaroid-photo" alt="Childhood photo">
+                                <p class="caption">Little [Name]</p>
+                            </div>
+                            <div class="polaroid-back">
+                                <p>Add a sweet message about their childhood photo here.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="polaroid-wrapper" style="--tilt: 3deg;">
+                    <div class="peg"></div>
+                    <div class="polaroid">
+                        <div class="polaroid-inner">
+                            <div class="polaroid-front">
+                                <img src="photo2.jpg" class="polaroid-photo" alt="Favorite hobby">
+                                <p class="caption">Their Hobby / Passion</p>
+                            </div>
+                            <div class="polaroid-back">
+                                <p>Add what you admire most about their talent or personality here.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="rope-track track-right">
+            <div class="rope-curve rope-left"></div>
+            <div class="rope-curve rope-center"></div>
+            <div class="rope-curve rope-right"></div>
+            <div class="polaroids-row">
+                <div class="polaroid-wrapper" style="--tilt: 4deg;">
+                    <div class="peg"></div>
+                    <div class="polaroid">
+                        <div class="polaroid-inner">
+                            <div class="polaroid-front">
+                                <img src="photo3.jpg" class="polaroid-photo" alt="You together">
+                                <p class="caption">Us</p>
+                            </div>
+                            <div class="polaroid-back">
+                                <p>Write a short note about how you met or your favorite moment together.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="polaroid-wrapper" style="--tilt: -4deg;">
+                    <div class="peg"></div>
+                    <div class="polaroid">
+                        <div class="polaroid-inner">
+                            <div class="polaroid-front">
+                                <img src="photo4.jpg" class="polaroid-photo object-top" alt="Present">
+                                <p class="caption">[Age] ✨</p>
+                            </div>
+                            <div class="polaroid-back">
+                                <p>Add a birthday wish and what you love about them today.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button id="next-surprise-btn" class="next-btn">Open the next surprise</button>
+    </div>
+
+    <div id="page-4" class="final-page" style="display: none;">
+        <div class="sun-background">
+            <div class="sun" style="top: 15%; left: 10%; animation-delay: 0s;">☀</div>
+            <div class="sun" style="top: 75%; left: 85%; animation-delay: 1.2s;">☀</div>
+            <div class="sun" style="top: 25%; left: 80%; animation-delay: 0.5s;">☀</div>
+            <div class="sun" style="top: 80%; left: 15%; animation-delay: 2s;">☀</div>
+            <div class="sun" style="top: 50%; left: 90%; animation-delay: 0.8s;">☀</div>
+            <div class="sun" style="top: 40%; left: 5%; animation-delay: 1.5s;">☀</div>
+            <div class="sun" style="top: 12%; left: 50%; animation-delay: 2.5s;">☀</div>
+            <div class="sun" style="top: 85%; left: 45%; animation-delay: 0.3s;">☀</div>
+        </div>
+
+        <div class="choice-card" style="position: relative; z-index: 2;">
+            <h1 class="choice-title">Choose a Memory - [Name] &amp; [Your Name] Edition</h1>
+            <div class="choice-buttons">
+                <button class="choice-btn" id="btn-memory-1">Favorite Memory #1</button>
+                <button class="choice-btn" id="btn-memory-2">Favorite Memory #2</button>
+            </div>
+            <button id="btn-to-page7" class="sun-emoji-btn">🌞</button>
+        </div>
+    </div>
+
+    <div id="page-memory-1" class="memory-page memory-1-page" style="display: none; --memory-bg: url('background_memory1.jpg');">
+        <div class="memory-container">
+            <div class="memory-image-box">
+                <img src="memory1.jpg" alt="Favorite memory 1" class="memory-img">
+            </div>
+            <div class="memory-text-box">
+                <p>
+                    Here, write about one of your <span class="fire-text">favorite trips</span> or adventures together. Mention a funny detail, a <span class="fire-text">special moment</span>, or why this memory means so much to you. Thank them for making life feel so <span class="fire-text">magical</span>!
+                </p>
+                <p class="template-note">*You can add photos for backgrounds. Replace "background_memory1.jpg" with your original photo</p>
+                <button class="back-btn" id="back-memory-1-btn">Back 😌</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="page-memory-2" class="memory-page memory-2-page" style="display: none; --memory-bg: url('background_memory2.jpg');">
+        <div class="memory-container">
+            <div class="memory-text-box">
+                <p>
+                    Here, share another <span class="ocean-text">unforgettable memory</span> — a concert, a trip, or a simple day you never want to forget. Tell them what you <span class="ocean-text">love</span> about spending time with them and thank them for always being <span class="ocean-text">there</span>.
+                </p>
+                <p class="template-note">*You can add photos for backgrounds. Replace "background_memory2.jpg" with your original photo</p>
+                <button class="back-btn memory-2-back-btn" id="back-memory-2-btn">Back 😌</button>
+            </div>
+            <div class="memory-image-box">
+                <img src="memory2.jpg" alt="Favorite memory 2" class="memory-2-img">
+            </div>
+        </div>
+    </div>
+
+    <div id="page-7" class="game-page" style="display: none;">
+        <h1 class="game-title">Match Our Emojis</h1>
+        <p class="template-note game-note">*You can personalize the emojis in script.js if you wish</p>
+        <div id="game-grid" class="game-grid"></div>
+        <div id="win-screen" class="win-screen">
+            <h2 class="win-message">Happy [Age]th Birthday! 🧡</h2>
+            <button class="win-btn" id="next-btn-final">✨</button>
+        </div>
+    </div>
+
+    <div id="page-8" class="final-page" style="display: none;">
+        <div class="sun-background">
+            <div class="sun" style="top: 15%; left: 10%; animation-delay: 0s;">☀</div>
+            <div class="sun" style="top: 75%; left: 85%; animation-delay: 1.2s;">☀</div>
+            <div class="sun" style="top: 25%; left: 80%; animation-delay: 0.5s;">☀</div>
+            <div class="sun" style="top: 80%; left: 15%; animation-delay: 2s;">☀</div>
+            <div class="sun" style="top: 50%; left: 90%; animation-delay: 0.8s;">☀</div>
+            <div class="sun" style="top: 40%; left: 5%; animation-delay: 1.5s;">☀</div>
+            <div class="sun" style="top: 12%; left: 50%; animation-delay: 2.5s;">☀</div>
+            <div class="sun" style="top: 85%; left: 45%; animation-delay: 0.3s;">☀</div>
+        </div>
+        <div style="position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; width: 100%;">
+            <h1 class="ticket-title">Your Birthday Ticket!</h1>
+            <div class="scratch-container choice-card">
+                <div class="prize-text">
+                    🎟️ GIFT UNLOCKED! 🎟️<br><br>
+                    [Write Your Birthday Gift or Surprise Plan Here]
+                </div>
+                <canvas id="scratch-pad"></canvas>
+            </div>
+            <button id="btn-to-page9" class="choice-btn" style="margin-top: 40px; font-size: 2rem; opacity: 0; pointer-events: none; transition: opacity 1.5s ease;">Let's Play a Game</button>
+        </div>
+    </div>
+
+    <div id="page-9" class="falling-game-page" style="display: none;">
+        <div class="magic-background">
+            <div class="heart" style="left: 10%; animation-delay: 0s;">💚</div>
+            <div class="heart" style="left: 30%; animation-delay: 2s;">💛</div>
+            <div class="heart" style="left: 50%; animation-delay: 4s;">🧡</div>
+            <div class="heart" style="left: 70%; animation-delay: 1s;">❤️</div>
+            <div class="heart" style="left: 90%; animation-delay: 3s;">💙</div>
+            <div class="star" style="top: 20%; left: 15%; animation-delay: 0.5s;">✦</div>
+            <div class="star" style="top: 70%; left: 80%; animation-delay: 1s;">✦</div>
+            <div class="star" style="top: 15%; left: 75%; animation-delay: 1.5s;">✦</div>
+            <div class="star" style="top: 80%; left: 20%; animation-delay: 2s;">✦</div>
+            <div class="star" style="top: 40%; left: 90%; animation-delay: 0.2s;">✦</div>
+        </div>
+
+        <div class="falling-game-container">
+            <h1 class="falling-title" style="color: white;">Catch 10 gifts! <span class="fire-text">Avoid</span> 💣</h1>
+            <h2 class="score-display">Score: <span id="current-score">0</span>/10</h2>
+
+            <div id="falling-area" class="falling-area">
+                <div id="basket" class="basket">🧺</div>
+
+                <div id="falling-win-screen" class="overlay-win" style="display: none;">
+                    <h2 class="win-message overlay-msg">
+                        Awesome!! Now for my favorite part...
+                    </h2>
+                    <button id="btn-to-page10" class="choice-btn overlay-btn">One last surprise...</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="page-10" class="letter-page" style="display: none;">
+        <div class="heart-sun-background">
+            <div class="heart-sun" style="top: 10%; left: 5%; animation-delay: 0s;">❤️</div>
+            <div class="heart-sun" style="top: 30%; left: 15%; animation-delay: 1.2s;">❤️</div>
+            <div class="heart-sun" style="top: 55%; left: 8%; animation-delay: 2.5s;">❤️</div>
+            <div class="heart-sun" style="top: 80%; left: 12%; animation-delay: 0.8s;">❤️</div>
+            <div class="heart-sun" style="top: 70%; left: 3%; animation-delay: 3s;">❤️</div>
+            <div class="heart-sun" style="top: 15%; left: 85%; animation-delay: 0.5s;">❤️</div>
+            <div class="heart-sun" style="top: 40%; left: 92%; animation-delay: 2s;">❤️</div>
+            <div class="heart-sun" style="top: 60%; left: 82%; animation-delay: 1.5s;">❤️</div>
+            <div class="heart-sun" style="top: 85%; left: 95%; animation-delay: 3.5s;">❤️</div>
+            <div class="heart-sun" style="top: 25%; left: 90%; animation-delay: 2.8s;">❤️</div>
+        </div>
+
+        <div class="letter-box">
+            <h1 class="letter-title">My Letter to You</h1>
+            <div class="letter-content"><span id="typed-text"></span><span class="cursor"></span></div>
+            <button id="next-paragraph-btn" class="letter-btn" style="display: none;">[Read more...]</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
